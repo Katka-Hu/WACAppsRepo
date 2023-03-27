@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bbm-project-ufe-deployment
+  name: tech-podolae-ambulance-ufe-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      pod: bbm-project-ufe-label
-  template:                    
+      pod: tech-podolae-ambulance-ufe-label
+  template:
     metadata:
       labels:
-        pod: bbm-project-ufe-label
+        pod: tech-podolae-ambulance-ufe-label
     spec:
       containers:
-        - name: bbm-project-ufe-container
-          image: wacteambbm/wac-project-fe:1.0.1
+        - name: tech-podolae-ambulance-ufe-container
+          image: silentstorm1406/ambulance-ufe
           imagePullPolicy: Always
           ports:
             - name: http
